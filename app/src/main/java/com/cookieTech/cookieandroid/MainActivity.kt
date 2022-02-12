@@ -10,6 +10,8 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.rememberNavController
+import com.cookieTech.cookieandroid.navigation.nav_graph.SetupNavGraph
 import com.cookieTech.cookieandroid.ui.theme.CookieAndroidTheme
 
 class MainActivity : ComponentActivity() {
@@ -17,27 +19,22 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             CookieAndroidTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background
-                ) {
-                    Greeting("Android")
-                }
+                MyApp()
             }
         }
     }
 }
 
 @Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
+fun MyApp() {
+    val navController = rememberNavController()
+    SetupNavGraph(navController = navController)
 }
 
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
     CookieAndroidTheme {
-        Greeting("Android")
+        MyApp()
     }
 }
