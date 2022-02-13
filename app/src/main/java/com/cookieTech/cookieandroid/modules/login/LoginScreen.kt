@@ -7,15 +7,16 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavController
+import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.cookieTech.cookieandroid.R
 import com.cookieTech.cookieandroid.modules.login.composable.LoginButton
+import com.cookieTech.cookieandroid.navigation.Screen
 
 
 @Composable
 fun LoginScreen(
-    navController: NavController
+    navController: NavHostController
 ) {
     Scaffold() {
         Column(
@@ -26,7 +27,10 @@ fun LoginScreen(
         ) {
 
             LoginButton(
-                onClick = { /*TODO*/ },
+                onClick = {
+                    navController.popBackStack()
+                    navController.navigate(Screen.Landing.route)
+                },
                 drawableId = R.drawable.ic_google,
                 buttonText = "Continue With Google",
                 backGroundColor = Color(0xB3FF3D00),
@@ -35,7 +39,10 @@ fun LoginScreen(
 
             Spacer(modifier = Modifier.height(16.dp))
             LoginButton(
-                onClick = { /*TODO*/ },
+                onClick = {
+                    navController.popBackStack()
+                    navController.navigate(Screen.Landing.route)
+                },
                 drawableId = R.drawable.ic_facebook,
                 buttonText = "Continue With Facebook",
                 backGroundColor = Color(0xB3039BE5),
