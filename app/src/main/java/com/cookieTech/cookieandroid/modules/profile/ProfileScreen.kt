@@ -20,15 +20,13 @@ fun ProfileScreen(
 ){
     Box(
         modifier = Modifier
-            .fillMaxSize()
-            .background(Color.Red),
+            .fillMaxSize(),
         contentAlignment = Alignment.Center
     ){
         Text(
             text = "Profile",
             fontSize = MaterialTheme.typography.h3.fontSize,
             fontWeight = FontWeight.Bold,
-            color = Color.White
         )
     }
 

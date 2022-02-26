@@ -19,15 +19,13 @@ fun OfflineScreen(
 ){
     Box(
         modifier = Modifier
-            .fillMaxSize()
-            .background(Color.Green),
+            .fillMaxSize(),
         contentAlignment = Alignment.Center
     ){
         Text(
             text = "Offline",
             fontSize = MaterialTheme.typography.h3.fontSize,
             fontWeight = FontWeight.Bold,
-            color = Color.White
         )
     }
 

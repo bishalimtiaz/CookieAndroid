@@ -22,7 +22,8 @@ fun BottomBar(navController: NavHostController){
     val navBackStackEntry by navController.currentBackStackEntryAsState()
     val currentDestination = navBackStackEntry?.destination
 
-    BottomNavigation() {
+    BottomNavigation(
+    ) {
         navBarItems.forEach{ navBarItem ->
             AddItem(navBarItem = navBarItem, currentDestination = currentDestination, navController = navController)
         }
