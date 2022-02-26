@@ -5,6 +5,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.cookieTech.cookieandroid.modules.landing.LandingScreen
+import com.cookieTech.cookieandroid.navigation.Route
 import com.cookieTech.cookieandroid.navigation.Route.AUTH_ROUTE
 import com.cookieTech.cookieandroid.navigation.Screen
 
@@ -14,7 +15,7 @@ fun SetupNavHost(
 ){
     NavHost(
         navController = navController,
-        startDestination = Screen.Landing.route,
+        startDestination = Route.AUTH_ROUTE,
     ){
         authNavGraph(navController = navController)
         composable(route = Screen.Landing.route) {
