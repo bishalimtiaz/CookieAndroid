@@ -3,8 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/BS714/Android Project/CookieAndroid/app/src/main/res/drawable-v24/ic_plus.xml" value="0.1305" />
+        <entry key="..\:/Users/BS714/Android Project/CookieAndroid/app/src/main/res/drawable/ic_breakfast.xml" value="0.1305" />
         <entry key="..\:/Users/BS714/Android Project/CookieAndroid/app/src/main/res/drawable/ic_home.xml" value="0.1" />
+        <entry key="..\:/Users/BS714/Android Project/CookieAndroid/app/src/main/res/drawable/ic_lunch.xml" value="0.1305" />
         <entry key="..\:/Users/BS714/Android Project/CookieAndroid/app/src/main/res/drawable/ic_offline.xml" value="0.1" />
+        <entry key="..\:/Users/BS714/Android Project/CookieAndroid/app/src/main/res/drawable/ic_plus.xml" value="0.1305" />
       </map>
     </option>
   </component>
