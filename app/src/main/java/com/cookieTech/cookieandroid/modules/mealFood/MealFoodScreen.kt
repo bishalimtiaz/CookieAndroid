@@ -29,7 +29,7 @@ fun MealFoodScreen(navController: NavHostController) {
                 title = "BeakFast",
                 elevation = 0.dp,
                 onBackButtonPressed = {
-
+                    navController.popBackStack()
                 }
             )
         }
