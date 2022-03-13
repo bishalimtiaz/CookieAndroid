@@ -74,6 +74,8 @@ fun AddDailyActivitySection(){
     }
 }
 
+private fun navigateToMealFoodScreen(){}
+
 
 @Composable
 @Preview(showBackground = true)
