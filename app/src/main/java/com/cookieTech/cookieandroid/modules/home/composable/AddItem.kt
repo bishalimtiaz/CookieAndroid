@@ -23,7 +23,8 @@ import com.cookieTech.cookieandroid.R
 fun AddMealItem(
     painter: Painter,
     title: String,
-    subTitle: String
+    subTitle: String,
+    onAddItemClicked: () -> Unit
 ) {
     Card(
         modifier = Modifier
@@ -58,25 +59,22 @@ fun AddMealItem(
                 )
 
             }
-            Surface(
-                shape = CircleShape,
-                color = Color(0xFFEEEEEE)
-            ) {
-                Image(
-                    modifier = Modifier.padding(4.dp),
-                    painter = painterResource(id = R.drawable.ic_plus),
-                    contentDescription = "plus icon"
-                )
-
-            }
+            RoundedAddButton(
+                onClicked = onAddItemClicked
+            )
 
         }
 
     }
 }
 
+
 @Composable
 @Preview(showBackground = true)
 fun PreviewAddItem(){
-    AddMealItem(painter = painterResource(id = R.drawable.ic_snacks), title = "Add Snacks", subTitle = "Recommended 127-253 kcal")
+    AddMealItem(
+        painter = painterResource(id = R.drawable.ic_snacks),
+        title = "Add Snacks", subTitle = "Recommended 127-253 kcal",
+        onAddItemClicked = {}
+    )
 }

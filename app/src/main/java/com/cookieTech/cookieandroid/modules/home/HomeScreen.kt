@@ -42,22 +42,34 @@ fun AddDailyActivitySection(){
         AddMealItem(
             painter = painterResource(id = R.drawable.ic_breakfast),
             title = "Add Breakfast",
-            subTitle = "Recommended 500-600 kcal"
+            subTitle = "Recommended 500-600 kcal",
+            onAddItemClicked = {
+
+            }
         )
         AddMealItem(
             painter = painterResource(id = R.drawable.ic_lunch),
             title = "Add Lunch",
-            subTitle = "Recommended 760-1040 kcal"
+            subTitle = "Recommended 760-1040 kcal",
+            onAddItemClicked = {
+
+            }
         )
         AddMealItem(
             painter = painterResource(id = R.drawable.ic_dinner),
             title = "Add Dinner",
-            subTitle = "Recommended 760-1040 kcal"
+            subTitle = "Recommended 760-1040 kcal",
+            onAddItemClicked = {
+
+            }
         )
         AddMealItem(
             painter = painterResource(id = R.drawable.ic_snacks),
             title = "Add Snack",
-            subTitle = "Recommended 127-253 kcal"
+            subTitle = "Recommended 127-253 kcal",
+            onAddItemClicked = {
+
+            }
         )
     }
 }
