@@ -1,27 +1,30 @@
 package com.cookieTech.cookieandroid.modules.mealFood
 
-import androidx.compose.material.Text
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
-import com.cookieTech.cookieandroid.core.base.ScreenBody
+import com.cookieTech.cookieandroid.core.base.BaseScreen
 
-@Composable
-fun MealFoodScreen(
-    navController: NavHostController
-){
-    MealFoodContent()
-}
 
-@Composable
-fun MealFoodContent(){
-    ScreenBody {
-        Text(text = "Meal Food Screen")
+class MealFoodScreen(navController: NavHostController) : BaseScreen() {
+
+    @Composable
+    override fun Body() {
+        Column() {
+
+        }
     }
-}
 
-@Preview(showBackground = true)
-@Composable
-fun PreviewMealFOod(){
-    MealFoodContent()
+    @Composable
+    private fun SearchView(){
+        Box(
+            modifier = Modifier.fillMaxWidth()
+        ){
+
+        }
+    }
+
 }

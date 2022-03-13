@@ -24,7 +24,7 @@ fun SetupLandingNavHost(
         composable(route = Screen.MealFood.route){
             MealFoodScreen(
                 navController = navController
-            )
+            ).Screen()
         }
 
     }
