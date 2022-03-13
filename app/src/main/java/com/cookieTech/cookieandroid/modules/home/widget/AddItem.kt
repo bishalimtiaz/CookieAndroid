@@ -1,12 +1,10 @@
-package com.cookieTech.cookieandroid.modules.home.composable
+package com.cookieTech.cookieandroid.modules.home.widget
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
 import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -18,6 +16,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.cookieTech.cookieandroid.R
+import com.cookieTech.cookieandroid.core.widget.RoundedIconButton
 
 @Composable
 fun AddMealItem(
@@ -59,8 +58,9 @@ fun AddMealItem(
                 )
 
             }
-            RoundedAddButton(
-                onClicked = onAddItemClicked
+            RoundedIconButton(
+                onClicked = onAddItemClicked,
+                painter = painterResource(id = R.drawable.ic_plus)
             )
 
         }

@@ -20,7 +20,7 @@ fun NavGraphBuilder.bottomNavGraph(
         route = BOTTOM_NAV
     ) {
         composable(route = Screen.Home.route){
-            HomeScreen(navController = navController).Screen()
+            HomeScreen(navController = navController)
         }
         composable(route = Screen.Offline.route){
             OfflineScreen(

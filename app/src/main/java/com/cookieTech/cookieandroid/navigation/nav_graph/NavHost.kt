@@ -15,7 +15,7 @@ fun SetupNavHost(
 ){
     NavHost(
         navController = navController,
-        startDestination = Route.AUTH_ROUTE,
+        startDestination = Screen.Landing.route,
     ){
         authNavGraph(navController = navController)
         composable(route = Screen.Landing.route) {
