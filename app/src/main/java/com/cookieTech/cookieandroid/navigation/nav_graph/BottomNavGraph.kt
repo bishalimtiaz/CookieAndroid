@@ -1,15 +1,12 @@
 package com.cookieTech.cookieandroid.navigation.nav_graph
 
-import androidx.compose.runtime.Composable
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
-import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navigation
 import com.cookieTech.cookieandroid.modules.home.HomeScreen
 import com.cookieTech.cookieandroid.modules.offline.OfflineScreen
 import com.cookieTech.cookieandroid.modules.profile.ProfileScreen
-import com.cookieTech.cookieandroid.navigation.Route
 import com.cookieTech.cookieandroid.navigation.Route.BOTTOM_NAV
 import com.cookieTech.cookieandroid.navigation.Screen
 
@@ -23,9 +20,7 @@ fun NavGraphBuilder.bottomNavGraph(
         route = BOTTOM_NAV
     ) {
         composable(route = Screen.Home.route){
-            HomeScreen(
-                navController = navController
-            )
+            HomeScreen(navController = navController).Screen()
         }
         composable(route = Screen.Offline.route){
             OfflineScreen(
