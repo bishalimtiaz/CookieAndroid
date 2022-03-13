@@ -8,20 +8,13 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun ScreenBody(
-    body: @Composable () -> Unit
-){
+
+    topBar: @Composable (() -> Unit)? = null,
+    body: @Composable () -> Unit,
+) {
     Scaffold(
-        topBar = {
-            TopAppBar(
-                title = {
-                    Text(
-                        text = "Home",
-                    )
-                },
-                elevation = 0.dp
-            )
-        },
-    ){
+        topBar = topBar ?: {},
+    ) {
         body()
     }
 
