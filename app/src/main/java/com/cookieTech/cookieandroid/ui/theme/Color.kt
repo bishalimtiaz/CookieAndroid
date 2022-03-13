@@ -1,7 +1,7 @@
 package com.cookieTech.cookieandroid.ui.theme
 
+import androidx.compose.material.Colors
 import androidx.compose.ui.graphics.Color
-
 
 
 val primaryColor = Color(0xFF9e602a)
@@ -13,4 +13,7 @@ val secondaryLightColor = Color(0xFf749ecf)
 val secondaryDarkColor = Color(0xFf04456f)
 val primaryTextColor = Color(0xFFffffff)
 val secondaryTextColor = Color(0xFFffffff)
-val basicGray = Color(0xFF67718B)
+val basicGray : Color get() = Color(0xFF67718B)
+
+
+val topBarContentColor: Color get() = Color.White

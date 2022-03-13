@@ -1,5 +1,6 @@
 package com.cookieTech.cookieandroid.ui.theme
 
+import androidx.compose.material.Colors
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Typography
 import androidx.compose.ui.graphics.Color

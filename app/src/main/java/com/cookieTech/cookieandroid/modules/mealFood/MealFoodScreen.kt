@@ -18,11 +18,22 @@ import androidx.navigation.NavHostController
 import com.cookieTech.cookieandroid.R
 import com.cookieTech.cookieandroid.core.widget.RoundedIconButton
 import com.cookieTech.cookieandroid.core.base.ScreenBody
+import com.cookieTech.cookieandroid.core.widget.DefaultTopBar
 
 
 @Composable
 fun MealFoodScreen(navController: NavHostController) {
-    ScreenBody {
+    ScreenBody(
+        topBar = {
+            DefaultTopBar(
+                title = "BeakFast",
+                elevation = 0.dp,
+                onBackButtonPressed = {
+
+                }
+            )
+        }
+    ) {
         Column() {
             SearchFoodWidget()
         }
