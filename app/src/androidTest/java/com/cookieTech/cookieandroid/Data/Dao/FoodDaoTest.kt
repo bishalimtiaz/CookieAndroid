@@ -69,7 +69,7 @@ class FoodDaoTest {
     fun addFood() = runBlocking{
         val result = foodDao.insert(food)
         Log.d("result", "addFood: $result")
-        val newFood = foodDao.getFoodById(result).first()
+        val newFood = foodDao.getFoodById(result.toInt()).first()
         assertThat(newFood,Matchers.equalTo(food))
 
         food1.id = 1
@@ -118,7 +118,7 @@ class FoodDaoTest {
     fun upsertFood() = runBlocking{
         val result = foodDao.upsert(food)
         Log.d("result", "addFood: $result")
-        val newFood = foodDao.getFoodById(result).first()
+        val newFood = foodDao.getFoodById(result.toInt()).first()
         assertThat(newFood, Matchers.equalTo(food))
 
 
@@ -126,7 +126,7 @@ class FoodDaoTest {
         food.id = 1
         val result1 = foodDao.upsert(food)
         Log.d("result", "addFood: $result1")
-        val newFood1 = foodDao.getFoodById(result1).first()
+        val newFood1 = foodDao.getFoodById(result1.toInt()).first()
         assertThat(newFood1, Matchers.equalTo(food))
 
     }
