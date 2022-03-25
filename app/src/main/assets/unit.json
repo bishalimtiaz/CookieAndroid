@@ -1,0 +1,222 @@
+[
+  {
+    "unit_name": "Gram",
+    "unit_symbol": "g",
+    "unit_category": "Weight"
+  },
+  {
+    "unit_name": "Kilogram",
+    "unit_symbol": "kg",
+    "unit_category": "Weight"
+  },
+  {
+    "unit_name": "Milligram",
+    "unit_symbol": "mg",
+    "unit_category": "Weight"
+  },
+  {
+    "unit_name": "Ounce",
+    "unit_symbol": "oz",
+    "unit_category": "Weight"
+  },
+  {
+    "unit_name": "Pound",
+    "unit_symbol": "lb",
+    "unit_category": "Weight"
+  },
+  {
+    "unit_name": "Stone",
+    "unit_symbol": "st",
+    "unit_category": "Weight"
+  },
+
+
+
+
+
+  {
+    "unit_name": "Stone",
+    "unit_symbol": "st",
+    "unit_category": "Weight"
+  },
+  {
+    "unit_name": "Cubic Foot",
+    "unit_symbol": "cu ft",
+    "unit_category": "Volume"
+  },
+  {
+    "unit_name": "Cubic Inch",
+    "unit_symbol": "cu in",
+    "unit_category": "Volume"
+  },
+  {
+    "unit_name": "Cubic Yard",
+    "unit_symbol": "cu yd",
+    "unit_category": "Volume"
+  },
+  {
+    "unit_name": "Cup",
+    "unit_symbol": "c",
+    "unit_category": "Volume"
+  },
+  {
+    "unit_name": "Fluid Ounce",
+    "unit_symbol": "fl oz",
+    "unit_category": "Volume"
+  },
+  {
+    "unit_name": "Gallon",
+    "unit_symbol": "gal",
+    "unit_category": "Volume"
+  },
+  {
+    "unit_name": "Liter",
+    "unit_symbol": "L",
+    "unit_category": "Volume"
+  },
+  {
+    "unit_name": "Milliliter",
+    "unit_symbol": "mL",
+    "unit_category": "Volume"
+  },
+  {
+    "unit_name": "Pint",
+    "unit_symbol": "pt",
+    "unit_category": "Volume"
+  },
+  {
+    "unit_name": "Quart",
+    "unit_symbol": "qt",
+    "unit_category": "Volume"
+  },
+  {
+    "unit_name": "Shot",
+    "unit_symbol": "sh",
+    "unit_category": "Volume"
+  },
+
+
+
+  {
+    "unit_name": "Centimeter",
+    "unit_symbol": "cm",
+    "unit_category": "Length"
+  },
+  {
+    "unit_name": "Foot",
+    "unit_symbol": "ft",
+    "unit_category": "Length"
+  },
+  {
+    "unit_name": "Inch",
+    "unit_symbol": "in",
+    "unit_category": "Length"
+  },
+  {
+    "unit_name": "Yard",
+    "unit_symbol": "yd",
+    "unit_category": "Length"
+  },
+  {
+    "unit_name": "kilometer",
+    "unit_symbol": "km",
+    "unit_category": "Length"
+  },
+  {
+    "unit_name": "Meter",
+    "unit_symbol": "m",
+    "unit_category": "Length"
+  },
+  {
+    "unit_name": "Mile",
+    "unit_symbol": "mi",
+    "unit_category": "Length"
+  },
+  {
+    "unit_name": "Millimeter",
+    "unit_symbol": "mm",
+    "unit_category": "Length"
+  },
+
+
+  {
+    "unit_name": "Acre",
+    "unit_symbol": "ac",
+    "unit_category": "Area"
+  },
+  {
+    "unit_name": "Square Centimeter",
+    "unit_symbol": "sq cm",
+    "unit_category": "Area"
+  },
+  {
+    "unit_name": "Square Foot",
+    "unit_symbol": "sq ft",
+    "unit_category": "Area"
+  },
+  {
+    "unit_name": "Square Inch",
+    "unit_symbol": "sq in",
+    "unit_category": "Area"
+  },
+  {
+    "unit_name": "Square Kilometer",
+    "unit_symbol": "sq km",
+    "unit_category": "Area"
+  },
+  {
+    "unit_name": "Square Meter",
+    "unit_symbol": "sq m",
+    "unit_category": "Area"
+  },
+  {
+    "unit_name": "Square Mile",
+    "unit_symbol": "sq mi",
+    "unit_category": "Area"
+  },
+  {
+    "unit_name": "Square Yard",
+    "unit_symbol": "sq yd",
+    "unit_category": "Area"
+  },
+
+
+
+  {
+    "unit_name": "Day",
+    "unit_symbol": "day",
+    "unit_category": "Time"
+  },
+  {
+    "unit_name": "Hour",
+    "unit_symbol": "hr",
+    "unit_category": "Time"
+  },
+  {
+    "unit_name": "Millisecond",
+    "unit_symbol": "ms",
+    "unit_category": "Time"
+  },
+  {
+    "unit_name": "Minute",
+    "unit_symbol": "min",
+    "unit_category": "Time"
+  },
+  {
+    "unit_name": "Second",
+    "unit_symbol": "sec",
+    "unit_category": "Time"
+  },
+
+  {
+    "unit_name": "Calorie",
+    "unit_symbol": "cal",
+    "unit_category": "Energy"
+  },
+  {
+    "unit_name": "Kilo Calorie",
+    "unit_symbol": "kcal",
+    "unit_category": "Energy"
+  }
+]
+
