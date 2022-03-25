@@ -9,5 +9,6 @@ object Route {
     const val PROFILE_ROUTE = "profile_route"
     const val OFFLINE_ROUTE = "offline_route"
     const val LOGIN_ROUTE = "login_route"
+    const val MEAL_FOOD_ROUTE = "meal_food_route"
 
 }
