@@ -1,41 +1,37 @@
 package com.cookieTech.cookieandroid.modules.search
+import androidx.compose.foundation.layout.Column
 import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import androidx.paging.ExperimentalPagingApi
 import androidx.paging.compose.collectAsLazyPagingItems
+import com.cookieTech.cookieandroid.core.base.ScreenBody
+import com.cookieTech.cookieandroid.core.widget.DefaultTopBar
+import com.cookieTech.cookieandroid.core.widget.SearchTopBar
+import com.cookieTech.cookieandroid.modules.mealFood.SearchFoodWidget
+import com.cookieTech.cookieandroid.navigation.Screen
 
 import com.example.screens.search.SearchWidget
 
-@ExperimentalPagingApi
 
 @Composable
-fun SearchScreen(
-    navController: NavHostController,
-    searchViewModel: FoodSearchViewModel = hiltViewModel()
-) {
-    val searchQuery by searchViewModel.searchQuery
-//    val searchedFoods = searchViewModel.searchedFoods.collectAsLazyPagingItems()
+fun SearchScreen(navController: NavHostController) {
 
-//    Scaffold(
-//        topBar = {
-//            SearchWidget(
-//                text = searchQuery,
-//                onTextChange = {
-//                    searchViewModel.updateSearchQuery(query = it)
-//                },
-//                onSearchClicked = {
-//                    searchViewModel.searchHeroes(query = it)
-//                },
-//                onCloseClicked = {
-//                    navController.popBackStack()
-//                }
-//            )
-//        },
-//        content = {
-//            ListContent(items = searchedImages)
-//        }
-//    )
+    ScreenBody(
+        topBar = {
+            SearchTopBar(
+                text = "Search",
+                {},
+                {},
+                {}
+            )
+        }
+    ){
+
+
+    }
+
 }

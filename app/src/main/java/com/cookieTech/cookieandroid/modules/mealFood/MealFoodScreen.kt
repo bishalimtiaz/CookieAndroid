@@ -1,6 +1,9 @@
 package com.cookieTech.cookieandroid.modules.mealFood
 
+import android.text.Editable
+import android.util.Log
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.*
@@ -19,6 +22,7 @@ import com.cookieTech.cookieandroid.R
 import com.cookieTech.cookieandroid.core.widget.RoundedIconButton
 import com.cookieTech.cookieandroid.core.base.ScreenBody
 import com.cookieTech.cookieandroid.core.widget.DefaultTopBar
+import com.cookieTech.cookieandroid.navigation.Screen
 
 
 @Composable
@@ -35,7 +39,10 @@ fun MealFoodScreen(navController: NavHostController) {
         }
     ) {
         Column() {
-            SearchFoodWidget()
+            SearchFoodWidget(false,{
+                Log.d("serch_test", "MealFoodScreen: ")
+                navController.navigate(Screen.SearchScreen.route)
+            })
         }
 
     }
@@ -43,7 +50,7 @@ fun MealFoodScreen(navController: NavHostController) {
 }
 
 @Composable
-fun SearchFoodWidget() {
+fun SearchFoodWidget(isEditable:Boolean,onSearchClicked:()->Unit) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -52,13 +59,17 @@ fun SearchFoodWidget() {
         verticalAlignment = Alignment.CenterVertically,
     ) {
         TextField(
-            shape = CircleShape,
+            enabled= isEditable,
             modifier = Modifier
                 .weight(1f)
-                .height(48.dp),
-
+                .height(48.dp)
+                .clickable(
+                    onClick = onSearchClicked,
+                    enabled = true,
+                ),
+            shape = CircleShape,
             value = "",
-            readOnly = true,
+            readOnly = !isEditable,
             onValueChange = {
 
             },
@@ -106,6 +117,8 @@ fun SearchFoodWidget() {
 @Composable
 fun PreviewMealFoodScreen() {
     ScreenBody {
-        SearchFoodWidget()
+        SearchFoodWidget(false,{
+
+        })
     }
 }

@@ -5,6 +5,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.cookieTech.cookieandroid.modules.mealFood.MealFoodScreen
+import com.cookieTech.cookieandroid.modules.search.SearchScreen
 import com.cookieTech.cookieandroid.navigation.Route.BOTTOM_NAV
 import com.cookieTech.cookieandroid.navigation.Screen
 
@@ -22,6 +23,12 @@ fun SetupLandingNavHost(
         bottomNavGraph(navController = navController)
         composable(route = Screen.MealFood.route){
             MealFoodScreen(
+                navController = navController
+            )
+        }
+
+        composable(route = Screen.SearchScreen.route){
+            SearchScreen(
                 navController = navController
             )
         }
