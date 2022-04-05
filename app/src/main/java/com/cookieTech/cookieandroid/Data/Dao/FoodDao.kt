@@ -1,9 +1,8 @@
 package com.cookieTech.cookieandroid.Data.Dao
 
 import androidx.room.*
-import com.cookieTech.cookieandroid.Domain.Models.*
+import com.cookieTech.cookieandroid.domain.models.*
 import kotlinx.coroutines.flow.Flow
-import kotlin.math.min
 
 @Dao
 abstract class FoodDao: BaseDao<Food>() {

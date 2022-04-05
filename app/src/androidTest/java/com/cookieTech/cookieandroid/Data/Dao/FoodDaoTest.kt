@@ -8,7 +8,7 @@ import androidx.test.espresso.matcher.ViewMatchers.assertThat
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import com.cookieTech.cookieandroid.Data.Database.AppDatabase
-import com.cookieTech.cookieandroid.Domain.Models.Food
+import com.cookieTech.cookieandroid.domain.models.Food
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
 import org.hamcrest.Matchers

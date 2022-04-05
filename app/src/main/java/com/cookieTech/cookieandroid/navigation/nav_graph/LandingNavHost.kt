@@ -4,11 +4,13 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import androidx.paging.ExperimentalPagingApi
 import com.cookieTech.cookieandroid.modules.mealFood.MealFoodScreen
 import com.cookieTech.cookieandroid.modules.search.SearchScreen
 import com.cookieTech.cookieandroid.navigation.Route.BOTTOM_NAV
 import com.cookieTech.cookieandroid.navigation.Screen
 
+@ExperimentalPagingApi
 @Composable
 fun SetupLandingNavHost(
     navController: NavHostController

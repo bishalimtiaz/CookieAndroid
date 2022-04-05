@@ -1,4 +1,4 @@
-package com.cookieTech.cookieandroid.Domain.Models
+package com.cookieTech.cookieandroid.domain.models
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

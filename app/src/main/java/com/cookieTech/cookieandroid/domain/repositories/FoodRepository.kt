@@ -1,8 +1,8 @@
-package com.cookieTech.cookieandroid.Domain.Repositories
+package com.cookieTech.cookieandroid.domain.repositories
 
-import com.cookieTech.cookieandroid.Domain.Models.Food
-import com.cookieTech.cookieandroid.Domain.Models.FoodWithVitaminsAndMinerals
-import com.cookieTech.cookieandroid.Domain.Models.SearchFoodItem
+import com.cookieTech.cookieandroid.domain.models.Food
+import com.cookieTech.cookieandroid.domain.models.FoodWithVitaminsAndMinerals
+import com.cookieTech.cookieandroid.domain.models.SearchFoodItem
 import kotlinx.coroutines.flow.Flow
 
 

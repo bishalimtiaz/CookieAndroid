@@ -1,8 +1,7 @@
-package com.cookieTech.cookieandroid.Domain.UseCases
+package com.cookieTech.cookieandroid.domain.useCases
 
-import com.cookieTech.cookieandroid.Domain.Models.Food
-import com.cookieTech.cookieandroid.Domain.Models.FoodWithVitaminsAndMinerals
-import com.cookieTech.cookieandroid.Domain.Repositories.FoodRepository
+import com.cookieTech.cookieandroid.domain.models.Food
+import com.cookieTech.cookieandroid.domain.repositories.FoodRepository
 
 class CreateAndUpdateFoodUseCase(
     val foodRepository: FoodRepository

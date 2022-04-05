@@ -8,9 +8,9 @@ import androidx.test.espresso.matcher.ViewMatchers
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import com.cookieTech.cookieandroid.Data.Database.AppDatabase
-import com.cookieTech.cookieandroid.Domain.Models.Food
-import com.cookieTech.cookieandroid.Domain.Models.FoodHistory
-import com.cookieTech.cookieandroid.Domain.Models.FoodHistoryAndFood
+import com.cookieTech.cookieandroid.domain.models.Food
+import com.cookieTech.cookieandroid.domain.models.FoodHistory
+import com.cookieTech.cookieandroid.domain.models.FoodHistoryAndFood
 import com.cookieTech.cookieandroid.MealType
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking

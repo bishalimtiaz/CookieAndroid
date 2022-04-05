@@ -1,8 +1,8 @@
 package com.cookieTech.cookieandroid.Data.Repositories
 
 import com.cookieTech.cookieandroid.Data.Repositories.DataSource.FoodHistoryDataSource
-import com.cookieTech.cookieandroid.Domain.Models.FoodHistory
-import com.cookieTech.cookieandroid.Domain.Repositories.FoodHistoryRepository
+import com.cookieTech.cookieandroid.domain.models.FoodHistory
+import com.cookieTech.cookieandroid.domain.repositories.FoodHistoryRepository
 
 class FoodHistoryRepositoryImpl(
     val foodHistoryDataSource: FoodHistoryDataSource

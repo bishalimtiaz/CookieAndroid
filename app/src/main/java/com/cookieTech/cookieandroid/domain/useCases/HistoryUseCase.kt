@@ -1,8 +1,7 @@
-package com.cookieTech.cookieandroid.Domain.UseCases
+package com.cookieTech.cookieandroid.domain.useCases
 
-import com.cookieTech.cookieandroid.Domain.Models.Food
-import com.cookieTech.cookieandroid.Domain.Models.FoodHistory
-import com.cookieTech.cookieandroid.Domain.Repositories.FoodHistoryRepository
+import com.cookieTech.cookieandroid.domain.models.FoodHistory
+import com.cookieTech.cookieandroid.domain.repositories.FoodHistoryRepository
 import java.util.*
 
 class HistoryUseCase(

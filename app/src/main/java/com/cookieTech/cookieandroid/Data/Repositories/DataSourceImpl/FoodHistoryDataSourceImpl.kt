@@ -2,8 +2,8 @@ package com.cookieTech.cookieandroid.Data.Repositories.DataSourceImpl
 
 import com.cookieTech.cookieandroid.Data.Database.AppDatabase
 import com.cookieTech.cookieandroid.Data.Repositories.DataSource.FoodHistoryDataSource
-import com.cookieTech.cookieandroid.Domain.Models.Food
-import com.cookieTech.cookieandroid.Domain.Models.FoodHistory
+import com.cookieTech.cookieandroid.domain.models.Food
+import com.cookieTech.cookieandroid.domain.models.FoodHistory
 import kotlinx.coroutines.flow.Flow
 
 class FoodHistoryDataSourceImpl(

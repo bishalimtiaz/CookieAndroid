@@ -1,10 +1,10 @@
-package com.cookieTech.cookieandroid.Architecture.ViewModels
+package com.cookieTech.cookieandroid.architecture.viewModels
 
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.paging.ExperimentalPagingApi
-import com.cookieTech.cookieandroid.Domain.Repositories.FoodRepository
+import com.cookieTech.cookieandroid.domain.repositories.FoodRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -12,7 +12,7 @@ import javax.inject.Inject
 @ExperimentalPagingApi
 @HiltViewModel
 class FoodSearchViewModel @Inject constructor(
-    private val repository: FoodRepository
+    //private val repository: FoodRepository
 ) : ViewModel() {
 
     private val _searchQuery = mutableStateOf("")
@@ -23,6 +23,10 @@ class FoodSearchViewModel @Inject constructor(
 
     fun updateSearchQuery(query: String) {
         _searchQuery.value = query
+    }
+
+    fun clearSearchQuery(){
+        _searchQuery.value = ""
     }
 
     fun searchFoods(query: String) {

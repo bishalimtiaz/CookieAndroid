@@ -1,8 +1,7 @@
 package com.cookieTech.cookieandroid.Data.Repositories.DataSource
 
-import com.cookieTech.cookieandroid.Domain.Models.*
+import com.cookieTech.cookieandroid.domain.models.*
 import kotlinx.coroutines.flow.Flow
-import java.util.*
 
 interface FoodHistoryDataSource {
 

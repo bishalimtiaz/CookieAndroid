@@ -2,8 +2,8 @@ package com.cookieTech.cookieandroid.Data.Dao
 
 import androidx.room.Dao
 import androidx.room.Query
-import com.cookieTech.cookieandroid.Domain.Models.FoodHistory
-import com.cookieTech.cookieandroid.Domain.Models.FoodHistoryAndFood
+import com.cookieTech.cookieandroid.domain.models.FoodHistory
+import com.cookieTech.cookieandroid.domain.models.FoodHistoryAndFood
 import kotlinx.coroutines.flow.Flow
 import java.util.*
 

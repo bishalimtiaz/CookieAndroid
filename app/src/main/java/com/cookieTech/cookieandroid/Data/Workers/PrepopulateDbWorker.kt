@@ -5,7 +5,7 @@ import android.util.Log
 import androidx.work.CoroutineWorker
 import androidx.work.WorkerParameters
 import com.cookieTech.cookieandroid.Data.Database.AppDatabase
-import com.cookieTech.cookieandroid.Domain.Models.Units
+import com.cookieTech.cookieandroid.domain.models.Units
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.google.gson.stream.JsonReader

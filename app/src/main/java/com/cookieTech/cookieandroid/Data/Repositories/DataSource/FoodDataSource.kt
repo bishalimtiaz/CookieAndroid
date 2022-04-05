@@ -1,7 +1,6 @@
 package com.cookieTech.cookieandroid.Data.Repositories.DataSource
 
-import android.app.DownloadManager
-import com.cookieTech.cookieandroid.Domain.Models.*
+import com.cookieTech.cookieandroid.domain.models.*
 import kotlinx.coroutines.flow.Flow
 
 

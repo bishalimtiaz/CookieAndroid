@@ -1,6 +1,6 @@
-package com.cookieTech.cookieandroid.Domain.Repositories
+package com.cookieTech.cookieandroid.domain.repositories
 
-import com.cookieTech.cookieandroid.Domain.Models.FoodHistory
+import com.cookieTech.cookieandroid.domain.models.FoodHistory
 
 interface FoodHistoryRepository {
 

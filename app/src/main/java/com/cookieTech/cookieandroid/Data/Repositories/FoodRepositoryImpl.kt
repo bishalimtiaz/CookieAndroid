@@ -1,14 +1,11 @@
 package com.cookieTech.cookieandroid.Data.Repositories
 
-import com.cookieTech.cookieandroid.Data.Database.calculateScore
 import com.cookieTech.cookieandroid.Data.Repositories.DataSource.FoodDataSource
-import com.cookieTech.cookieandroid.Domain.Models.Food
-import com.cookieTech.cookieandroid.Domain.Models.FoodWithVitaminsAndMinerals
-import com.cookieTech.cookieandroid.Domain.Models.SearchFoodItem
-import com.cookieTech.cookieandroid.Domain.Repositories.FoodRepository
+import com.cookieTech.cookieandroid.domain.models.Food
+import com.cookieTech.cookieandroid.domain.models.FoodWithVitaminsAndMinerals
+import com.cookieTech.cookieandroid.domain.models.SearchFoodItem
+import com.cookieTech.cookieandroid.domain.repositories.FoodRepository
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.filter
-import kotlinx.coroutines.flow.map
 
 class FoodRepositoryImpl(
     val foodDataSource: FoodDataSource

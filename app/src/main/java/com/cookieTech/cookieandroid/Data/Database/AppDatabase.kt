@@ -15,7 +15,7 @@ import com.cookieTech.cookieandroid.Data.Dao.FoodHistoryDao
 import com.cookieTech.cookieandroid.Data.Dao.UnitsDao
 import com.cookieTech.cookieandroid.Data.Workers.PrepopulateDbWorker
 import com.cookieTech.cookieandroid.Data.Workers.PrepopulateDbWorker.Companion.KEY_FILENAME
-import com.cookieTech.cookieandroid.Domain.Models.*
+import com.cookieTech.cookieandroid.domain.models.*
 import com.cookieTech.cookieandroid.UNIT_DATA_FILENAME
 
 

@@ -8,15 +8,16 @@ import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Close
-import androidx.compose.material.icons.filled.Search
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
+import androidx.compose.ui.focus.FocusRequester
+import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
-import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -61,8 +62,23 @@ fun SearchTopBar(
     text: String,
     onTextChange: (String) -> Unit,
     onSearchClicked: (String) -> Unit,
-    onCloseClicked: () -> Unit
+    onCloseClicked: () -> Unit,
+    onBackClicked: () -> Unit
 ) {
+
+    /**
+     * Auto Focus
+     * **/
+    val focusRequester = remember {
+        FocusRequester()
+    }
+
+    LaunchedEffect(Unit) {
+        focusRequester.requestFocus()
+    }
+
+
+
     Surface(
         modifier = Modifier
             .fillMaxWidth()
@@ -74,6 +90,7 @@ fun SearchTopBar(
     ) {
         TextField(
             modifier = Modifier
+                .focusRequester(focusRequester)
                 .fillMaxWidth()
                 .semantics {
                     contentDescription = "TextField"
@@ -85,46 +102,16 @@ fun SearchTopBar(
                     modifier = Modifier
                         .alpha(alpha = ContentAlpha.medium),
                     text = "Search here...",
-                    color = Color.White
+                    style = MaterialTheme.typography.body2
                 )
             },
-            textStyle = TextStyle(
-                color = MaterialTheme.colors.primaryVariant
-            ),
+            textStyle = MaterialTheme.typography.subtitle2,
             singleLine = true,
             leadingIcon = {
-                IconButton(
-                    modifier = Modifier
-                        .alpha(alpha = ContentAlpha.medium),
-                    onClick = {}
-                ) {
-                    Icon(
-                        imageVector = Icons.Default.ArrowBack,
-                        contentDescription = "Back Icon",
-                        tint = MaterialTheme.colors.primaryVariant
-                    )
-                }
+                BackButton(onTap = onBackClicked)
             },
             trailingIcon = {
-                IconButton(
-                    modifier = Modifier
-                        .semantics {
-                            contentDescription = "CloseButton"
-                        },
-                    onClick = {
-                        if (text.isNotEmpty()) {
-                            onTextChange("")
-                        } else {
-                            onCloseClicked()
-                        }
-                    }
-                ) {
-                    Icon(
-                        imageVector = Icons.Default.Close,
-                        contentDescription = "Close Icon",
-                        tint = MaterialTheme.colors.primaryVariant
-                    )
-                }
+                if (text.isNotEmpty()) ClearButton(onTap = onCloseClicked)
             },
             keyboardOptions = KeyboardOptions(
                 imeAction = androidx.compose.ui.text.input.ImeAction.Search
@@ -153,19 +140,46 @@ fun PreviewDefaultTopBar() {
     )
 }
 
+@Composable
+fun BackButton(onTap: () -> Unit) {
+    IconButton(
+        modifier = Modifier
+            .alpha(alpha = ContentAlpha.medium),
+        onClick = onTap
+    ) {
+        Icon(
+            imageVector = Icons.Default.ArrowBack,
+            contentDescription = "Back Icon",
+            tint = Color.Black
+        )
+    }
+}
+
+@Composable
+fun ClearButton(onTap: () -> Unit) {
+    IconButton(
+        modifier = Modifier
+            .semantics {
+                contentDescription = "CloseButton"
+            },
+        onClick = onTap
+    ) {
+        Icon(
+            imageVector = Icons.Default.Close,
+            contentDescription = "Close Icon",
+            tint = Color.Black
+        )
+    }
+}
+
 @Preview(showBackground = true)
 @Composable
-fun previewSearchTopBAr() {
+fun PreviewSearchTopBAr() {
     SearchTopBar(
         text = "Home",
-        {
-
-        },
-        {
-
-        },
-        {
-
-        }
+        {},
+        {},
+        {},
+        {}
     )
 }

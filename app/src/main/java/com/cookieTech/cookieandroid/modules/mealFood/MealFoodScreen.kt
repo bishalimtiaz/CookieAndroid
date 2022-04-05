@@ -4,6 +4,7 @@ import android.text.Editable
 import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.focusable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.*
@@ -39,10 +40,9 @@ fun MealFoodScreen(navController: NavHostController) {
         }
     ) {
         Column() {
-            SearchFoodWidget(false,{
-                Log.d("serch_test", "MealFoodScreen: ")
-                navController.navigate(Screen.SearchScreen.route)
-            })
+            SearchFoodWidget(
+                onSearchClicked = { navController.navigate(Screen.SearchScreen.route) }
+            )
         }
 
     }
@@ -50,16 +50,17 @@ fun MealFoodScreen(navController: NavHostController) {
 }
 
 @Composable
-fun SearchFoodWidget(isEditable:Boolean,onSearchClicked:()->Unit) {
+fun SearchFoodWidget(onSearchClicked: () -> Unit) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
+            .focusable(false)
             .background(MaterialTheme.colors.primary)
             .padding(20.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
         TextField(
-            enabled= isEditable,
+            enabled = false,
             modifier = Modifier
                 .weight(1f)
                 .height(48.dp)
@@ -69,7 +70,7 @@ fun SearchFoodWidget(isEditable:Boolean,onSearchClicked:()->Unit) {
                 ),
             shape = CircleShape,
             value = "",
-            readOnly = !isEditable,
+            readOnly = true,
             onValueChange = {
 
             },
@@ -96,9 +97,11 @@ fun SearchFoodWidget(isEditable:Boolean,onSearchClicked:()->Unit) {
             },
             isError = false,
             colors = TextFieldDefaults.textFieldColors(
+                backgroundColor = Color.White,
                 focusedIndicatorColor = Color.Transparent,
                 unfocusedIndicatorColor = Color.Transparent,
-                backgroundColor = Color.White,
+                cursorColor = MaterialTheme.colors.primaryVariant,
+                disabledIndicatorColor = Color.Transparent
             )
         )
         Spacer(Modifier.width(20.dp))
@@ -117,8 +120,8 @@ fun SearchFoodWidget(isEditable:Boolean,onSearchClicked:()->Unit) {
 @Composable
 fun PreviewMealFoodScreen() {
     ScreenBody {
-        SearchFoodWidget(false,{
+        SearchFoodWidget {
 
-        })
+        }
     }
 }
