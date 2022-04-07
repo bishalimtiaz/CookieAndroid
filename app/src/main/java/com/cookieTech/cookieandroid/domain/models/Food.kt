@@ -1,27 +1,48 @@
 package com.cookieTech.cookieandroid.domain.models
 
 import androidx.room.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 
+@Serializable
 @Entity(
     tableName = "food_table"
 )
 data class Food(
-    val name:String,
-    val quantity:Float,
-    val unit:Int,
-    val fat:Float,
-    val protein:Float,
-    val carb:Float,
-    val fiber:Float,
-    val netCarb:Float,
-    val calories:Float
-){
-    @PrimaryKey(autoGenerate = true) var id:Long = 0
+    @SerialName("id")
+    @PrimaryKey(autoGenerate = true)
+    var id: Long? = 0,
+
+    @SerialName("name")
+    val name: String?,
+
+    @SerialName("quantity")
+    val quantity: Float?,
+
+    @SerialName("unit")
+    val unit: Int?,
+
+    @SerialName("fat")
+    val fat: Float?,
+
+    @SerialName("protein")
+    val protein: Float?,
+
+    @SerialName("carb")
+    val carb: Float?,
+
+    @SerialName("fiber")
+    val fiber: Float?,
+
+    @SerialName("netCarb")
+    val netCarb: Float?,
+
+    @SerialName("calories")
+    val calories: Float?,
+
     var isDeleted:Boolean = false
-
-
-}
+)
 
 
 @Entity(tableName = "food_fts")

@@ -4,8 +4,11 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 
+@Serializable
 @Entity(
     tableName = "vitamins_table",
     foreignKeys = [
@@ -13,21 +16,52 @@ import androidx.room.PrimaryKey
     ]
 )
 data class Vitamins(
-    @ColumnInfo(name = "food_id")val foodId:Int,
-    val b1ThiamineMg:Float,
-    val b2RiboflavinMg:Float,
-    val b3NiacinMg:Float,
-    val b5PantothenicAcidMg:Float,
-    val b6PyridoxineMg:Float,
-    val b12CobalaminMicg:Float,
-    val b7BiotinMg:Float,
-    val b8CholineMg:Float,
-    val b9FolateMicg:Float,
-    val vitaminAIU:Float,
-    val vitaminCMg:Float,
-    val vitaminDIU:Float,
-    val vitaminEMg:Float,
-    val vitaminKMicg:Float
-){
-    @PrimaryKey(autoGenerate = true) var id:Int = 0
-}
+    @SerialName("id")
+    @PrimaryKey(autoGenerate = true)
+    var id:Int? = 0,
+
+    @ColumnInfo(name = "food_id")
+    val foodId: Int?,
+
+    @SerialName("b1ThiamineMg")
+    val b1ThiamineMg: Float?,
+
+    @SerialName("b2RiboflavinMg")
+    val b2RiboflavinMg: Float?,
+
+    @SerialName("b3NiacinMg")
+    val b3NiacinMg: Float?,
+
+    @SerialName("b5PantothenicAcidMg")
+    val b5PantothenicAcidMg: Float?,
+
+    @SerialName("b6PyridoxineMg")
+    val b6PyridoxineMg: Float?,
+
+    @SerialName("b12CobalaminMicg")
+    val b12CobalaminMicg: Float?,
+
+    @SerialName("b7BiotinMg")
+    val b7BiotinMg: Float?,
+
+    @SerialName("b8CholineMg")
+    val b8CholineMg: Float?,
+
+    @SerialName("b9FolateMicg")
+    val b9FolateMicg: Float?,
+
+    @SerialName("vitaminAIU")
+    val vitaminAIU: Float?,
+
+    @SerialName("vitaminCMg")
+    val vitaminCMg: Float?,
+
+    @SerialName("vitaminDIU")
+    val vitaminDIU: Float?,
+
+    @SerialName("vitaminEMg")
+    val vitaminEMg: Float?,
+
+    @SerialName("vitaminKMicg")
+    val vitaminKMicg: Float?
+)
