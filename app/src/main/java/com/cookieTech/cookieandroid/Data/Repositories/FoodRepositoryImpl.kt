@@ -1,14 +1,23 @@
 package com.cookieTech.cookieandroid.Data.Repositories
 
-import com.cookieTech.cookieandroid.Data.Repositories.DataSource.FoodDataSource
+import androidx.paging.Pager
+import androidx.paging.PagingConfig
+import androidx.paging.PagingData
+import com.cookieTech.cookieandroid.Data.Repositories.DataSource.FoodLocalDataSource
+import com.cookieTech.cookieandroid.Data.pagging.SearchFoodMinimalPagingSource
+import com.cookieTech.cookieandroid.Data.repositories.DataSource.FoodRemoteDataSource
 import com.cookieTech.cookieandroid.domain.models.Food
 import com.cookieTech.cookieandroid.domain.models.FoodWithVitaminsAndMinerals
 import com.cookieTech.cookieandroid.domain.models.SearchFoodItem
 import com.cookieTech.cookieandroid.domain.repositories.FoodRepository
-import kotlinx.coroutines.flow.Flow
+import com.cookieTech.cookieandroid.domain.useCases.ITEM_PER_PAGE
+import io.reactivex.Observable
+import kotlinx.coroutines.flow.*
+import kotlinx.coroutines.runBlocking
 
 class FoodRepositoryImpl(
-    val foodDataSource: FoodDataSource
+    val foodRemoteDataSource: FoodRemoteDataSource,
+    val foodDataSource: FoodLocalDataSource
 ):FoodRepository
 {
     override fun createFood(food: Food): Long {
@@ -35,8 +44,13 @@ class FoodRepositoryImpl(
         TODO("Not yet implemented")
     }
 
-    override fun searchFoodMinimal(query: String): Flow<List<SearchFoodItem>> {
-        return foodDataSource.searchFoodMinimal(query)
+    override suspend fun searchFoodMinimal(query: String): Flow<PagingData<SearchFoodItem>> {
+        return Pager(
+            config = PagingConfig(ITEM_PER_PAGE),
+            pagingSourceFactory = {
+                SearchFoodMinimalPagingSource(foodRemoteDataSource, query)
+            }
+        ).flow
     }
 
     override fun selectFood(id: Long): Flow<FoodWithVitaminsAndMinerals> {

@@ -18,6 +18,7 @@ buildscript {
         workVersion = '2.7.1'
         retrofit_version = '2.9.0'
         gsonVersion = '2.8.9'
+        paging_version = '3.1.1'
     }
     dependencies {
         classpath 'com.google.dagger:hilt-android-gradle-plugin:2.38.1'

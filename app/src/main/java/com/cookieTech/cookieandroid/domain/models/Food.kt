@@ -1,6 +1,7 @@
 package com.cookieTech.cookieandroid.domain.models
 
 import androidx.room.*
+import com.google.gson.annotations.SerializedName
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -12,7 +13,7 @@ import kotlinx.serialization.Serializable
 data class Food(
     @SerialName("id")
     @PrimaryKey(autoGenerate = true)
-    var id: Long? = 0,
+    var id: Long = 0,
 
     @SerialName("name")
     val name: String?,
@@ -54,12 +55,19 @@ data class FoodFts(
 
 
 
+@Serializable
 data class SearchFoodItem(
+    @SerialName("id")
     val id:Long,
+    @SerialName("name")
     val foodName:String,
-    val calories:Float,
-    val quantity:Float,
-    val unit:String
+    @SerialName("calories")
+    val calories:Float?,
+    @SerialName("quantity")
+    val quantity:Float?,
+    @SerialName("unit")
+    @Embedded(prefix = "u_")
+    val unit:Units?
 )
 
 data class SearchFoodItemWithMathInfo(

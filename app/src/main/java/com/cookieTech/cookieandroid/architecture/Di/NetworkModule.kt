@@ -1,8 +1,8 @@
-package com.cookieTech.cookieandroid.di
+package com.cookieTech.cookieandroid.Architecture.di
 
 
 import com.cookieTech.cookieandroid.BuildConfig
-import com.cookieTech.cookieandroid.data.remote.CookieApi
+import com.cookieTech.cookieandroid.data.remote.FoodApi
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import dagger.Module
 import dagger.Provides
@@ -46,7 +46,9 @@ object NetworkModule {
 
     @Provides
     @Singleton
-    fun provideUnsplashApi(retrofit: Retrofit): CookieApi{
-        return retrofit.create(CookieApi::class.java)
+    fun provideFoodApi(retrofit: Retrofit): FoodApi{
+        return retrofit.create(FoodApi::class.java)
     }
+
+
 }

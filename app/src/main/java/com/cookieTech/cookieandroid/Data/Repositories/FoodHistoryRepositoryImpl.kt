@@ -10,7 +10,7 @@ class FoodHistoryRepositoryImpl(
     :FoodHistoryRepository {
 
 
-    override fun addFoodToHistory(history: FoodHistory):Long {
+    override fun addFoodToHistory(food: FoodHistory):Long {
         return foodHistoryDataSource.createFoodHistory(history).toLong()
     }
 

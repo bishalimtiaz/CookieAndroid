@@ -1,14 +1,14 @@
 package com.cookieTech.cookieandroid.Data.Repositories.DataSourceImpl
 
+import com.cookieTech.cookieandroid.Data.Dao.FoodDao
 import com.cookieTech.cookieandroid.Data.Database.AppDatabase
 import com.cookieTech.cookieandroid.Data.Database.calculateScore
-import com.cookieTech.cookieandroid.Data.Repositories.DataSource.FoodDataSource
+import com.cookieTech.cookieandroid.Data.Repositories.DataSource.FoodLocalDataSource
 import com.cookieTech.cookieandroid.domain.models.*
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 
-class FoodDataSourceImpl(val appDatabase: AppDatabase):FoodDataSource {
-    val foodDao = appDatabase.foodDao
+class FoodLocalDataSourceImpl(val foodDao: FoodDao):FoodLocalDataSource {
     override fun createFood(food: Food): Long {
         return foodDao.insert(food)
     }
