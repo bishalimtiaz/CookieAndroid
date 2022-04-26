@@ -13,8 +13,8 @@ import kotlinx.coroutines.flow.Flow
 
 const val ITEM_PER_PAGE = 10
 class SearchUseCase(
-    val foodRepository: FoodRepository,
-    val foodHistoryRepository: FoodHistoryRepository
+    val foodRepository: FoodRepository
+//    val foodHistoryRepository: FoodHistoryRepository
 ) {
 
     suspend fun searchFood(query:String):Flow<PagingData<SearchFoodItem>>{
@@ -31,7 +31,7 @@ class SearchUseCase(
     }
 
     fun addFoodToHistory(item: SearchFoodItem) {
-        foodHistoryRepository.addFoodToHistory(item)
+//        foodHistoryRepository.addFoodToHistory(item)
     }
 
 
