@@ -9,11 +9,11 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun ScreenBody(
 
-    topBar: @Composable (() -> Unit)? = null,
+    topBar: @Composable (() -> Unit) = {  },
     body: @Composable () -> Unit,
 ) {
     Scaffold(
-        topBar = topBar ?: {},
+        topBar = topBar,
     ) {
         body()
     }

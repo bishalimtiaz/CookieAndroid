@@ -5,6 +5,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.paging.ExperimentalPagingApi
+import com.cookieTech.cookieandroid.modules.create.CreateFoodScreen
 import com.cookieTech.cookieandroid.modules.mealFood.MealFoodScreen
 import com.cookieTech.cookieandroid.modules.search.SearchScreen
 import com.cookieTech.cookieandroid.navigation.Route.BOTTOM_NAV
@@ -33,6 +34,10 @@ fun SetupLandingNavHost(
             SearchScreen(
                 navController = navController
             )
+        }
+
+        composable(route = Screen.CreateFoodScreen.route){
+            CreateFoodScreen(navController = navController)
         }
 
     }

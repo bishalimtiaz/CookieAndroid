@@ -36,6 +36,7 @@ import com.cookieTech.cookieandroid.core.widget.RoundedIconButton
 import com.cookieTech.cookieandroid.core.widget.SearchTopBar
 import com.cookieTech.cookieandroid.domain.models.SearchFoodItem
 import com.cookieTech.cookieandroid.domain.models.Units
+import com.cookieTech.cookieandroid.modules.ContentItem
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.collect
@@ -93,7 +94,7 @@ fun ListContent(items:  LazyPagingItems<SearchFoodItem>,onAdd:(item:SearchFoodIt
         items(items){food->
             Log.d("paging_test", "ListContent: " + food)
             food?.let {
-                ContentItem(item = food, onAdd)
+                ContentItem(item = food,true, onAdd)
             }
 
         }
@@ -101,43 +102,8 @@ fun ListContent(items:  LazyPagingItems<SearchFoodItem>,onAdd:(item:SearchFoodIt
 }
 
 
-@Composable
-fun ContentItem(item:SearchFoodItem,onAdd:(item:SearchFoodItem)->Unit) {
-    Surface(modifier = Modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(5.dp),
-        border = BorderStroke(1.dp, MaterialTheme.colors.primaryVariant)
-    ) {
-        Row(
-            modifier = Modifier.padding(10.dp),
-            horizontalArrangement = Arrangement.SpaceBetween,
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            Column {
-                Text(text = item.foodName,style = MaterialTheme.typography.subtitle1)
-                Text(text = "${item.quantity}  ${item.unit!!.unit_symbol}",style = MaterialTheme.typography.body2)
-            }
-            RoundedIconButton(
-                onClicked = { onAdd(item) },
-                painter = painterResource(id = R.drawable.ic_plus)
-            )
-        }
-    }
-}
 
-@Composable
-@Preview(showBackground = true)
-fun previewContentItem(){
-    ContentItem(
-        item = SearchFoodItem(
-            1,
-            "Apple",
-            1f,
-            1f,
-            Units(1, "kilo calorie", "kcal", "energy")
-        ),{
 
-        }
-    )
-}
+
 
 

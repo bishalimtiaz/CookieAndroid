@@ -1,5 +1,6 @@
 package com.cookieTech.cookieandroid.core.widget
 
+import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.text.KeyboardActions
@@ -27,7 +28,8 @@ import com.cookieTech.cookieandroid.ui.theme.topBarContentColor
 fun DefaultTopBar(
     elevation: Dp = AppBarDefaults.TopAppBarElevation,
     title: String,
-    onBackButtonPressed: (() -> Unit)? = null
+    onBackButtonPressed: (() -> Unit)? = null,
+    actions: @Composable RowScope.() -> Unit = {}
 ) {
     TopAppBar(
         title = {

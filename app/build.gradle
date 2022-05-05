@@ -132,4 +132,6 @@ dependencies {
 
 
     implementation "androidx.paging:paging-runtime:$paging_version"
+
+    implementation "com.google.accompanist:accompanist-pager:0.12.0"
 }

@@ -11,6 +11,7 @@ object Route {
     const val LOGIN_ROUTE = "login_route"
     const val MEAL_FOOD_ROUTE = "meal_food_route"
     const val SEARCH_FOOD_ROUTE = "search_food_route"
+    const val CREATE_FOOD_ROUTE = "create_food_route"
 
 
 }

@@ -1,5 +1,6 @@
 package com.cookieTech.cookieandroid.navigation
 
+import com.cookieTech.cookieandroid.navigation.Route.CREATE_FOOD_ROUTE
 import com.cookieTech.cookieandroid.navigation.Route.HOME_ROUTE
 import com.cookieTech.cookieandroid.navigation.Route.LANDING_ROUTE
 import com.cookieTech.cookieandroid.navigation.Route.LOGIN_ROUTE
@@ -18,4 +19,5 @@ sealed class Screen(val route: String){
     object Offline: Screen(route = OFFLINE_ROUTE)
     object MealFood: Screen(route = MEAL_FOOD_ROUTE)
     object SearchScreen:Screen(route = SEARCH_FOOD_ROUTE)
+    object CreateFoodScreen:Screen(route = CREATE_FOOD_ROUTE)
 }
